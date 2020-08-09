@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./dist/css/reset.css">
+  <link rel="stylesheet" href="./dist/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap" rel="stylesheet">
+  <title>Caixeta Mello</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h1>Caixeta Mello Advogados</h1>
+    </div>
+    <div class="wrapper-hambuguer" onclick="menuActive()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="menu">
+      <a href="#" onclick="menuActive()">Sobre</a>
+      <a href="#" onclick="menuActive()">Área de Atuação</a>
+      <a href="#" onclick="menuActive()">Equipe</a>
+      <a href="#" onclick="menuActive()">Contato</a>
+
+    </nav>
+  </header>
+
+  <main class="wrapper">
+    <section class="wrapper-banner">
+      <img src="./img/banner.jpg" alt="Advogado assinando documento" class="background-banner">
+      <img src="./img/banner-mobile.png" alt="Amamentar" class="background-banner-mobile">
+      <div id="slider">
+          <img class="active" src="./img/banner-1.png" alt="">
+          <img src="./img/banner-2.png" alt="">
+          <img src="./img/banner-3.png" alt="">
+          <img src="./img/banner-4.png" alt="">
+          <ul>
+            <li onclick="selectBullet(0);" class="active"></li>
+            <li onclick="selectBullet(1);"></li>
+            <li onclick="selectBullet(2);"></li>
+            <li onclick="selectBullet(3);"></li>
+          </ul>
+      </div>
+    </section>
+
+    <section class="wrapper-vaccine" id="vacina">
+     
+      <div class="info-slide">
+      
+      </div>
+    
+    </section>
+    <section class="wrapper-pandemic" id="pandemia">
+     
+    </section>
+
+    
+  <script src="./dist/js/index.js"></script>
+</body>
+
+</html>
