@@ -1,15 +1,21 @@
 let time = 5e3,
     currentImageIndex = 0,
-    images = document.querySelectorAll("#slider img");
+    images = document.querySelectorAll("#slider img"),
+    tituloNome = document.getElementById("titulo-nome");
+    tituloAdvogado = document.getElementById("titulo-advogado");
 
-function nextImage() {
-    images[currentImageIndex].classList.remove("active"), bullets[currentImageIndex].classList.remove("active"), ++currentImageIndex >= max && (currentImageIndex = 0), images[currentImageIndex].classList.add("active"), bullets[currentImageIndex].classList.add("active")
-}
+
+// function nextImage() {
+//     images[currentImageIndex].classList.remove("active"), bullets[currentImageIndex].classList.remove("active"), ++currentImageIndex >= max && (currentImageIndex = 0), images[currentImageIndex].classList.add("active"), bullets[currentImageIndex].classList.add("active")
+// }
 
 function start() {
-    setInterval(() => {
-        nextImage()
-    }, time)
+    // setInterval(() => {
+    //     nextImage()
+    // }, time)
+    tituloNome.classList.add('titulo-activated');
+    tituloAdvogado.classList.add('titulo-activated');
+
 }
 
 function selectBullet(e) {
@@ -38,7 +44,8 @@ function prevSlide() {
 
 function scrollAnchor() {
     document.querySelector('a[href^="#"]').scrollIntoView({
-        behavior: "smooth"
+        behavior: "smooth",
+        
     })
 }
 
@@ -50,3 +57,4 @@ function menuActive() {
     0 === document.querySelectorAll(".active-menu").length ? activeMenu[0].classList.add("active-menu") : activeMenu[0].classList.remove("active-menu")
 }
 max = images.length, bullets = document.querySelectorAll("#slider li"), vacinas = document.querySelectorAll("#slide-vacina"), widthSlide = document.querySelectorAll(".info-slide"), initSlide = widthSlide[0].offsetWidth - widthSlide[0].scrollWidth, currentSlideIndex = 0, leftSlide = 0, activeMenu = document.querySelectorAll("#menu"), window.addEventListener("load", start);
+
