@@ -8,9 +8,9 @@
     src: url('./Bellerose.woff') format('woff');
     }
 
-.wrapper{
+/* .wrapper{
     margin-top: 85px;
-}
+} */
 
 html {
     overflow-x: hidden;
@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 100%
 }
 
@@ -27,7 +27,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -43,7 +43,7 @@ box-shadow: -1px 2px 5px 1px rgba(0,0,0,0.75);
         justify-content: space-between;
         width: 100%;
         z-index: 9999;
-        position: fixed;
+        position: sticky;
         top: 0;
         left: 0;
         width: 100%;
@@ -71,7 +71,7 @@ header .logo {
     }
 }
 
-header .logo h1 {
+ header .logo h1 {
     font-size: 0;
     background: url(./../../img/logo_horizontal.png) no-repeat center;
     width: 300px;
@@ -181,6 +181,8 @@ header nav a.btn {
 .wrapper-banner {
     position: relative;
     text-align: center;
+
+    margin-left: -1px;
 } 
 .centered {
     position: absolute;
@@ -228,7 +230,7 @@ header nav a.btn {
 
 @media screen and (max-width: 600px) {
     .centered>h2{
-        font-size: 4em;
+        font-size: 3em;
         margin-bottom: 20px;
       }
       
@@ -349,7 +351,99 @@ header nav a.btn {
     bottom: 0;
     /* z-index: 9 */
 }
-.info-slide{
-    box-sizing: border-box;
-    padding-top: 185px;
+
+
+section{
+    padding-top: 85px;
 }
+
+
+
+
+
+.footer{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: space-around;
+    align-items: center;
+ border-top: #A01A27 5px solid;
+}
+.footer .logo{
+    justify-self: start;
+    width: 20%;
+    min-width: 100px;
+}
+
+.footer img{
+    max-width: 50px;
+    /* margin-left: 20px; */
+}
+.footer-title{
+    text-transform: uppercase;
+color: #A01A27;
+margin-bottom: 10px;
+
+}
+a{
+    text-decoration: none;
+}
+.contacts-footer{
+    display: flex;
+    flex-direction: column;
+}
+/* .social{
+    margin-right: 30px;
+} */
+.social a{
+    box-sizing: border-box;
+
+   
+    color: #000;
+    margin: 5px 10px 5px 0;
+    transition: all .8s;
+
+}
+.social a i{
+    margin-right: 3px;
+}
+.facebook:hover{
+    
+    color:  #3b5998;
+}
+.whatsapp:hover{
+    
+    color: #34af23;
+}
+.instagram:hover{
+    color: #517fa4;
+}
+.contacts{
+    display: flex;
+    flex-direction: column;
+
+}
+.contacts a{
+    box-sizing: border-box;
+    padding: 10px 10px 10px 0;
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #000;
+    transition: all .8s;
+
+}
+.contacts a:hover{
+    color: #5555ff;
+
+}
+
+.social-icons{
+    display: flex;
+    flex-direction: row;
+
+    font-size: 1.3em;
+}
+
+
